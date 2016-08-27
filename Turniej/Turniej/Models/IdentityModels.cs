@@ -3,6 +3,7 @@ using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
+using System.Collections.Generic;
 
 namespace Turniej.Models
 {
@@ -15,6 +16,15 @@ namespace Turniej.Models
             var userIdentity = await manager.CreateIdentityAsync(this, DefaultAuthenticationTypes.ApplicationCookie);
             // Add custom user claims here
             return userIdentity;
+        }
+        public string Forename { get; set; }
+        public string Name { get; set; }
+        public List<Tournament> UserTournaments { get; set; }
+        public bool IsActive { get; set; } //po kliknięciu linku aktywacyjnego
+
+        public ApplicationUser()
+        {
+            this.UserTournaments = new List<Tournament>();
         }
     }
 
