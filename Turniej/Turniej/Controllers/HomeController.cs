@@ -22,7 +22,7 @@ namespace Turniej.Controllers
 
         public ActionResult Contact()
         {
-            ViewBag.Message = "Strona Kontaktowa";
+            ViewBag.Message = "Strona kontaktowa";
 
             return View();
         }

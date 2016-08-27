@@ -1,12 +1,13 @@
 ﻿@{
     ViewBag.Title = "Home Page";
 }
-<div class="jumbotron">
+<div class="jumbotron col-sm-12 col-md-10 col-lg-10">
     <h1>Turniejowo</h1>
-    <p class="lead col-md-10">Strona ta pozwoli Ci tworzyć własne turnieje, zarządzać nimi, oraz brać udział w turniejach organizowanych przez innych.</p>
-    <p>@Html.ActionLink("Dowiedz się więcej", "MoreInfo", "Home", new { area = "" }, new { @class = "linkbutton" })</p>
+    <p class="col-md-10 col-lg-10 col-sm-12">Strona ta pozwoli Ci tworzyć własne turnieje, zarządzać nimi, oraz brać udział w turniejach organizowanych przez innych.</p>
+ <p class="col-md-10 col-lg-10 col-sm-12" >@Html.ActionLink("Dowiedz się więcej", "MoreInfo", "Home", new { area = "" }, new { @class = "linkbutton" })</p>
 </div>
-<div class="jumbotronthinwithnocolor">   
+<div class="jumbotronthinwithnocolor col-sm-12 col-md-8 col-lg-8">   
         <h2 >Nie masz jeszcze konta?</h2>
-        <p>@Html.ActionLink("Zarejestruj się", "Register", "Account", routeValues: null, htmlAttributes: new { @class = "linkbutton", id = "registerLink" })</p>
+        <p class="col-md-10 col-lg-10 col-sm-12">@Html.ActionLink("Zarejestruj się", "Register", "Account", routeValues: null, htmlAttributes: new { @class = "linkbutton" , id = "registerLink" })</p>
+        
 </div>

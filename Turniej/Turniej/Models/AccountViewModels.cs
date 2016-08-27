@@ -33,7 +33,7 @@ namespace Turniej.Models
         public string Code { get; set; }
         public string ReturnUrl { get; set; }
 
-        [Display(Name = "Remember this browser?")]
+        [Display(Name = "Zapamiętać tą przeglądarkę?")]
         public bool RememberBrowser { get; set; }
 
         public bool RememberMe { get; set; }
@@ -49,35 +49,47 @@ namespace Turniej.Models
     public class LoginViewModel
     {
         [Required]
-        [Display(Name = "Email")]
+        [Display(Name = "E-mail")]
         [EmailAddress]
         public string Email { get; set; }
 
         [Required]
         [DataType(DataType.Password)]
-        [Display(Name = "Password")]
+        [Display(Name = "Hasło")]
         public string Password { get; set; }
 
-        [Display(Name = "Remember me?")]
+        [Display(Name = "Zapamiętaj mnie")]
         public bool RememberMe { get; set; }
     }
 
     public class RegisterViewModel
     {
         [Required]
+        [StringLength(100, ErrorMessage = "{0} musi mieć długość przynajmniej {2} znaków.", MinimumLength = 2)]
+        [DataType(DataType.Text)]
+        [Display(Name = "Imię: ")]
+        public string Forename { get; set; }
+
+        [Required]
+        [StringLength(100, ErrorMessage = "{0} musi mieć długość przynajmniej {2} znaków.", MinimumLength = 2)]
+        [DataType(DataType.Text)]
+        [Display(Name = "Nazwisko: ")]
+        public string Name { get; set; }
+
+        [Required]
         [EmailAddress]
-        [Display(Name = "Email")]
+        [Display(Name = "E-mail: ")]
         public string Email { get; set; }
 
         [Required]
-        [StringLength(100, ErrorMessage = "The {0} must be at least {2} characters long.", MinimumLength = 6)]
+        [StringLength(100, ErrorMessage = "{0} musi mieć długość przynajmniej {2} znaków.", MinimumLength = 6)]
         [DataType(DataType.Password)]
-        [Display(Name = "Password")]
+        [Display(Name = "Hasło: ")]
         public string Password { get; set; }
 
         [DataType(DataType.Password)]
-        [Display(Name = "Confirm password")]
-        [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
+        [Display(Name = "Potwierdź nowe hasło: ")]
+        [Compare("Password", ErrorMessage = "Hasła powinny być takie same!")]
         public string ConfirmPassword { get; set; }
     }
 
