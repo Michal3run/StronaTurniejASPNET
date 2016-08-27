@@ -3,9 +3,10 @@
 }
 <div class="jumbotron">
     <h1>Turniejowo</h1>
-    <p class="lead col-md-10">Strona ta pozwoli Ci tworzyć własne turnieje, zarządzać nimi, oraz brać udział w turniejach organizowanych przez innych.</p>
-    <p>@Html.ActionLink("Dowiedz się więcej", "MoreInfo", "Home", new { area = "" }, new { @class = "linkbutton" })</p>
+    <p class="lead col-md-8 col-lg-8">Strona ta pozwoli Ci tworzyć własne turnieje, zarządzać nimi, oraz brać udział w turniejach organizowanych przez innych.</p>
+    <p class="lead col-md-12 col-lg-12">@Html.ActionLink("Dowiedz się więcej", "MoreInfo", "Home", new { area = "" }, new { @class = "linkbutton" })</p>
 </div>
+<br/>
 <div class="jumbotronthinwithnocolor">   
         <h2 >Nie masz jeszcze konta?</h2>
         <p>@Html.ActionLink("Zarejestruj się", "Register", "Account", routeValues: null, htmlAttributes: new { @class = "linkbutton", id = "registerLink" })</p>

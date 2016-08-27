@@ -4952,18 +4952,28 @@ a.list-group-item.active > .badge,
   }
 
 .mytitlediv{
-  padding: 10px;
-  padding-left: 20px;
+  padding: 5px;
+  padding-left: 40px;
+  padding-bottom: 10px;
   margin-top: 10px;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
   margin-left: 10px;
   margin-right: 10px;
   font-size: 18px;
-  width: 66.67%;
-  font-weight: 100;
-  line-height: 1;
+  width: 80%;
+  font-weight: 200;
+  line-height: 1.5;
   color: inherit;
   background-color: #cccccc;
+}
+
+.Footer
+{
+    position: absolute;
+    bottom: 0px;
+    height: 3px;
+    background-color: #666;
+    color: #eee;
 }
 
 .linkbutton {
